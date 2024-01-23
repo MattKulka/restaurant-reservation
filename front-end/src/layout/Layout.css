@@ -1,4 +1,89 @@
+* {
+  color: #e8e5da;
+  background-color: #3a445d;
+}
+
+h5 {
+  font-size: larger;
+}
+
+.list-group-item {
+  background-color: #e8e5da;
+}
+
+.lgi-table {
+  background-color: #D9BFD3;
+}
+
+.lgi-interior {
+  background-color: #e8e5da;
+  color: #3a445d;
+}
+
+.lgi-table-interior {
+  background-color: #D9BFD3;
+  color: #3a445d;
+}
+
 .side-bar {
   background-color: #393a44;
   min-width: 200px;
+}
+
+.menu {
+  background-color: #393a44;
+  color: #d9bfd3;
+}
+
+.menu-align {
+  padding: 1%;
+}
+
+.btn-a {
+  color: #393a44;
+  background-color: #6D67E4;
+}
+
+.border-a {
+  border: 1px solid #9F73AB;
+}
+
+.border-a:hover {
+  border: 1px solid #6D67E4;
+}
+
+.btn-a:hover {
+  background-color: #9F73AB;
+}
+
+.btn-warn {
+  background-color: #EB6440;
+  color: #d9bfd3;
+  border: 1px solid #C84B31;
+}
+
+.btn-warn:hover {
+  background-color: #C84B31;
+  color: #d9bfd3;
+  border: 1px solid #EB6440;
+}
+
+.form-control {
+  background-color: #E8E5DA;
+  color: #393a44;
+}
+
+.minw100 {
+  min-width: 100px;
+}
+
+.minw300 {
+  min-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .side-bar {
+    height: 100vh;
+    padding-top: 1%;
+  }
 }
