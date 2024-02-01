@@ -3,6 +3,7 @@ import ErrorAlert from "../../utils/Errors/ErrorAlert";
 import { next, previous, today } from "../../utils/date-time";
 import ReservationDisplay from "../reservations/ReservationDisplay";
 import TablesDisplay from "../tables/TablesDisplay";
+import img from "../assets/img.jpg"
 
 /**
  * Defines the dashboard page.
@@ -36,6 +37,7 @@ export default function Dashboard({
           reservations={reservations}
           loadDashboard={loadDashboard}
         />
+        
       </div>
       <TablesDisplay tables={tables} loadDashboard={loadDashboard} />
 
@@ -70,7 +72,10 @@ export default function Dashboard({
         >
           Next Day
         </button>
-      </div>
+      </div>     
+      <div class="section__pic-container">
+      <img src={img} alt="fork"/>
+      </div>   
       <ErrorAlert error={reservationsError} />
       <ErrorAlert error={tablesError} />
     </main>
