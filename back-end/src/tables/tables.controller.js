@@ -47,13 +47,11 @@ const _validateOccupied = (req, res, next) => {
 
 const _validateReservationId = async (req, res, next) => {
   let { reservation_id } = req.body.data;
-  if (!reservation_id){
+  if (!reservation_id)
     next({
       status: 400,
       message: `Property 'reservation_id' must be present.`,
     });
-    return
-  }
   const listedReservation = await service.listResById(Number(reservation_id));
   if (!listedReservation)
     next({
@@ -149,20 +147,9 @@ async function list(req, res) {
 async function occupy(req, res) {
   const { table_id } = req.params;
   const { reservation_id } = req.body.data;
-
-  try {
-    if (!reservation_id || !table_id) {
-      throw new Error('Both reservation_id and table_id are required');
-    }
-
-    const data = await service.occupy(table_id, reservation_id);
-    res.status(200).json({ data: data });
-  } catch (error) {
-    console.error('Error during occupy:', error);
-    res.status(400).json({ error: error.message });
-  }
+  const data = await service.occupy(table_id, reservation_id);
+  res.status(200).json({ data: data });
 }
-
 
 async function free(req, res) {
   const { table_id } = req.params;

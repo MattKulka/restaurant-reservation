@@ -194,7 +194,7 @@ describe("US-04 - Seat reservation", () => {
         const response = await request(app)
           .put(`/tables/${tableOne.table_id}/seat`)
           .set("Accept", "application/json")
-          .send({ datum: {} });
+          .send({ data: {} });
 
         expect(response.body.error).toBeDefined();
         expect(response.status).toBe(400);

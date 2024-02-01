@@ -1,6 +1,6 @@
 * {
   color: #e8e5da;
-  background-color: #3a445d;
+  background-color: #657bb3;
 }
 
 h5 {
@@ -12,7 +12,7 @@ h5 {
 }
 
 .lgi-table {
-  background-color: #D9BFD3;
+  background-color: #76b8f7;
 }
 
 .lgi-interior {
@@ -21,7 +21,7 @@ h5 {
 }
 
 .lgi-table-interior {
-  background-color: #D9BFD3;
+  background-color: #76b8f7;
   color: #3a445d;
 }
 
@@ -36,12 +36,13 @@ h5 {
 }
 
 .menu-align {
+  
   padding: 1%;
 }
 
 .btn-a {
-  color: #393a44;
-  background-color: #6D67E4;
+  color: #01020e;
+  background-color: #76b8f7;
 }
 
 .border-a {
