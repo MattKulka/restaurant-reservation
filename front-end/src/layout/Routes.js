@@ -46,38 +46,41 @@ function Routes() {
 
   return (
     <Switch>
-      <Route exact={true} path="/tables/new">
-        <NewTable loadDashboard={loadDashboard} />
-      </Route>
-
-      <Route exact={true} path="/reservations/:reservation_id/seat">
-        <Seating tables={tables} loadDashboard={loadDashboard} />
-      </Route>
-
-      <Route exact={true} path="/reservations/:reservation_id/edit">
-        <EditReservations loadDashboard={loadDashboard} />
-      </Route>
-
-      <Route exact={true} path="/reservations/new">
-        <CreateReservations loadDashboard={loadDashboard} />
+      <Route exact={true} path="/">
+        <Redirect to={`/dashboard`} />
       </Route>
 
       <Route exact={true} path="/reservations">
-        <Redirect to={`/reservations?date=${date ? date : today()}`} />
-        <Dashboard
+        <Redirect to={`/dashboard`} />
+        {/* <Dashboard
           date={date ? date : today()}
           reservations={reservations}
           reservationsError={reservationsError}
           tables={tables}
           tablesError={tablesError}
           loadDashboard={loadDashboard}
-        />
+        /> */}
       </Route>
 
-      <Route exact={true} path="/dashboard">
-        <Redirect to={`/dashboard?date=${date ? date : today()}`} />
+      <Route path="/tables/new">
+        <NewTable loadDashboard={loadDashboard} />
+      </Route>
+
+      <Route path="/reservations/:reservation_id/seat">
+        <Seating tables={tables} loadDashboard={loadDashboard} />
+      </Route>
+
+      <Route path="/reservations/:reservation_id/edit">
+        <EditReservations loadDashboard={loadDashboard} />
+      </Route>
+
+      <Route path="/reservations/new">
+        <CreateReservations loadDashboard={loadDashboard} />
+      </Route>
+
+      <Route path="/dashboard">
         <Dashboard
-          date={date ? date : today()}
+          date={query.get("date") || today()}
           reservations={reservations}
           reservationsError={reservationsError}
           tables={tables}
@@ -88,10 +91,6 @@ function Routes() {
 
       <Route path="/search">
         <Search />
-      </Route>
-
-      <Route exact={true} path="/">
-        <Redirect to={`/dashboard?date=${date ? date : today()}`} />
       </Route>
 
       <Route>
