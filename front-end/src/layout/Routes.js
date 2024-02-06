@@ -50,18 +50,6 @@ function Routes() {
         <Redirect to={`/dashboard`} />
       </Route>
 
-      <Route exact={true} path="/reservations">
-        <Redirect to={`/dashboard`} />
-        {/* <Dashboard
-          date={date ? date : today()}
-          reservations={reservations}
-          reservationsError={reservationsError}
-          tables={tables}
-          tablesError={tablesError}
-          loadDashboard={loadDashboard}
-        /> */}
-      </Route>
-
       <Route path="/tables/new">
         <NewTable loadDashboard={loadDashboard} />
       </Route>
